@@ -24,7 +24,7 @@ const App = () => {
         <div id="smooth-content">
           <HeroSection />
           <MessageSection />
-          <FlavorSection />
+          {/* <FlavorSection /> */}
           <NutritionSection/>
           <BenefitSection/>
           <div className="h-dvh border border-amber-600"></div>
