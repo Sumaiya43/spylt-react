@@ -1,14 +1,15 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./sections/HeroSection";
-import { ScrollSmoother, ScrollTrigger } from "gsap/all";
+import { ScrollSmoother, ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
 import MessageSection from "./sections/messageSection";
 import FlavorSection from "./sections/FlavorSection";
 import { useGSAP } from "@gsap/react";
 import NutritionSection from "./sections/NutritionSection";
 import BenefitSection from "./sections/BenefitSection";
+import TestimonialSection from "./sections/TestimonialSection";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 const App = () => {
   useGSAP(() => {
@@ -25,9 +26,12 @@ const App = () => {
           <HeroSection />
           <MessageSection />
           {/* <FlavorSection /> */}
-          <NutritionSection/>
-          <BenefitSection/>
-          <div className="h-dvh border border-amber-600"></div>
+          <NutritionSection />
+          <div>
+            <BenefitSection />
+            {/* <TestimonialSection /> */}
+          </div>
+         
         </div>
       </div>
     </div>

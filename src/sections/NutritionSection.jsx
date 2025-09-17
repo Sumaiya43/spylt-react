@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
-import SplitType from "split-type";
 
 const NutritionSection = () => {
   const isMobile = useMediaQuery({
@@ -22,10 +21,10 @@ const NutritionSection = () => {
   }, [isMobile]);
 
   useGSAP(() => {
-    const titleSplit = new SplitType(".nutrition-title", {
+    const titleSplit = SplitText.create(".nutrition-title", {
       type: "chars",
     });
-    const paragraphSplit = new SplitType(".nutrition-section p", {
+    const paragraphSplit = SplitText.create(".nutrition-section p", {
       type: "words, lines",
       linesClass: "paragraph-line",
     });
@@ -63,11 +62,6 @@ const NutritionSection = () => {
       clipPath: "polygon(100% 0, 0 0, 0 100%, 100% 100%)",
       ease: "power1.inOut",
     });
-
-    return () => {
-      titleSplit.revert();
-      paragraphSplit.revert();
-    };
   });
 
   return (
@@ -75,10 +69,10 @@ const NutritionSection = () => {
       <img
         src="/images/slider-dip.png"
         alt=""
-        className="w-full object-cover"
+        className="absolute block w-full h-[50vh] md:h-[40vh] object-cover "
       />
 
-      <img src="/images/big-img.png" alt="" className="big-img" />
+      <img src="/images/big-img.png" alt="" className="big-img"/>
 
       <div className="flex md:flex-row flex-col justify-between md:px-10 px-5 mt-14 md:mt-0">
         <div className="relative inline-block md:translate-y-20">
