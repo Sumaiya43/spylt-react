@@ -1,12 +1,22 @@
-# React + Vite
+Live Demo: https://spylt-p.netlify.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+        Beautiful scroll and entrance animations powered by GSAP
+        Responsive layout (mobile → desktop)
+        Tailwind CSS utility-first styling
+        Clean, reusable React components
+        Easy deploy on Netlify
 
-Currently, two official plugins are available:
+🧰 Tech Stack
+      React (Vite)
+      Tailwind CSS
+      GSAP
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🗺️ Roadmap
+      Add more drink categories
+      Accessibility polish (focus states, alt text audit) 
+      SEO meta tags + social share image
+      Lazy-load heavy images
+      
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+        
