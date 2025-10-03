@@ -1,8 +1,16 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType from "split-type";
+import { useMediaQuery } from "react-responsive";
 
 const HeroSection = () => {
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+
+  const isTablet = useMediaQuery({
+    query: "(max-width: 1024px)",
+  });
   useGSAP(() => {
     const split = new SplitType(".hero-title", { types: "chars" });
 
@@ -67,11 +75,28 @@ const HeroSection = () => {
   return (
     <section>
       <div className="hero-container">
-        <img
-          src="/images/static-img.png"
-          alt="hero-image"
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 object-auto scale-100 md:scale-150"
-        />
+        {isTablet ? (
+          <>
+            {isMobile && (
+              <img
+                src="/images/hero-bg.png"
+                className="absolute bottom-40 size-full object-cover"
+              />
+            )}
+            <img
+              src="/images/hero-img.png"
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 object-auto"
+            />
+          </>
+        ) : (
+          <video
+            src="/videos/hero-bg.mp4"
+            autoPlay
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
         <div className="hero-content opacity-0">
           <div className="overflow-hidden">
             <h1 className="hero-title">freaking Delicious</h1>
