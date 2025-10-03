@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./sections/HeroSection";
 import { ScrollSmoother, ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
-import MessageSection from "./sections/messageSection";
+import MessageSection from "./sections/MessageSection";
 import FlavorSection from "./sections/FlavorSection";
 import { useGSAP } from "@gsap/react";
 import NutritionSection from "./sections/NutritionSection";
